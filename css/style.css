@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    background-color: grey;
+   
+    justify-content: center;
+}
+.container{
+    margin-top: 30px;
+    padding: 10px;   
+     background-color: white;
+    width: 92vw;
+    height: 100vh;
+}
+.button{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.helpform{
+    background-color: aqua;
+
+    display: flex;
+    justify-content: center;
+   box-shadow:0 0 10px black;
+    width: 200px;
+    height: 280px;
+    position: fixed;
+    left: 50vw  ;
+    top :30vh ;
+    border: 1px solid black ;
+    border-radius: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input{
+    margin: 20px;
+}
+.but{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.exitbut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ position: absolute;
+top: 5px;
+right: 5px;
+
+width: 20px;
+height: 20px;   
+}
+span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+
+}
+#s_one{
+    transform: rotate(45deg);
+}
+#s_too{
+    transform: rotate(-45deg);
+}
+.invis{
+  display: none;
+  
+}
