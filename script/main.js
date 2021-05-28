@@ -12,15 +12,24 @@ exit.addEventListener("click",function(){
     click_class(helpform, "invis");
 })
 
-let fo = document.forms.user;
-
-let userphon = fo.elements.phone;
-let sub = document.querySelector(".sub");
-let username
+let fo = document.forms.user; //форма 
+let username = fo.elements.name; //имя формы
+let userphon = fo.elements.phone;  //телефон формы
+let sub = document.querySelector(".sub"); //кнопка отправки
 let n;
-sub.addEventListener("click", function(){
-     username = fo.elements.name;
-    return username
-} )
 let Client = {};
-Client.name = username.value;
+
+
+function addValObj (Obj, name, phone ){ //функция добавления элементов в обект после клика
+    Obj.name = name.value
+    Obj.phone = phone.value
+   
+    n = JSON.stringify(Obj);
+    
+    return Obj, n;
+     ;
+    }
+sub.addEventListener("click", function(){addValObj(Client, username, userphon)});
+ 
+
+
