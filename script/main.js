@@ -16,20 +16,27 @@ let fo = document.forms.user; //форма
 let username = fo.elements.name; //имя формы
 let userphon = fo.elements.phone;  //телефон формы
 let sub = document.querySelector(".sub"); //кнопка отправки
-let n;
-let Client = {};
 
+class Client{constructor(firstName, phone){
+    this.firstName = firstName;
+    this.phone = phone;
 
-function addValObj (Obj, name, phone ){ //функция добавления элементов в обект после клика
-    Obj.name = name.value
-    Obj.phone = phone.value
+}} ;
+let newClient;
+
+function addValObj (name, phone ){ //функция добавления элементов в обект после клика
+  
+    let newClient = new Client( name.value, phone.value )
    
-    n = JSON.stringify(Obj);
+    //n = JSON.stringify(Obj);
     
-    return Obj, n;
-     ;
+    return newClient;
     }
-sub.addEventListener("click", function(){addValObj(Client, username, userphon)});
+    
+    sub.addEventListener("click", function(){  
+       newClient = new Client( username.value, userphon.value )
+    
+     });
  
 
 
